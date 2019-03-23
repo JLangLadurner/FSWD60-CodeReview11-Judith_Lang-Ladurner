@@ -1,0 +1,47 @@
+
+.gradient{
+background-color:  #CCC;
+
+}
+
+
+header{
+  background-color:  #CCC;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+#logo {
+  width: 100px;
+  height: 70px;
+}
+#headingdata{
+  display: block;
+  font-size: 30px;
+}
+
+#test{
+  margin-top: 10px;
+  margin-left:  450px;
+}
+
+i {
+  color: pink;
+}
+
+.navbar {
+      font-family: 'Gloria Hallelujah', cursive;
+      background-color: #C9C9E9 ;
+      margin-bottom: 0;
+      border-radius: 0;
+      color: black;
+    }
+
+    h1{
+      font-family: 'Gloria Hallelujah', cursive;
+      font-size: 40px;
+    }
+
+    h2{
+      font-family: 'Gloria Hallelujah', cursive;
+      font-size:24px;
+    }

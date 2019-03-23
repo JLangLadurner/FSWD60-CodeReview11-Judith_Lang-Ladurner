@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <head>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script> 
+  <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Karla" rel="stylesheet">
+  
+
+  <link rel="stylesheet" type="text/css" href="css/style01.css">
+  <title>Welcome To My Travelblog</title>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      #map {
+        height: 500px;
+        width: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+      
+    <div class="container bg-grey main">
+  <div class="row header">
+    <header>
+      <div class="col-lg-2">
+        <img id ="logo" src="img/fresh_logo_color.png">
+      </div>
+      <div class="col-lg-8 col-lg-offset-2 data" id="headingdata">
+        <h1>Welcome to my Travelblog</h1>
+      </div>
+    </header>
+  </div>
+    <div class="row">
+    <nav class="navbar navbar-inverse">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="index.html"><img src="img/fresh_logo_color.png" width="70px" height="30px" alt="logo"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href=""></a></li>
+          
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+           <li><a href="search.php"><span class="glyphicon glyphicon-search"></span>Search</a></li>
+          <li><a href="logout.php?logout"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div>
+    <h5>Here is Schönbrunn Zoo... </h5>
+  </div>
+
+    <div class="row" id="map"></div>
+        <script>
+          function initMap() {
+            var myLatlng = {lat: 48.175999296, lng: 16.301498794};
+
+            // Create a new StyledMapType object, passing it an array of styles,
+            // and the name to be displayed on the map type control.
+            var styledMapType = new google.maps.StyledMapType(
+                [
+                  {elementType: 'geometry', stylers: [{color: '#ebe3cd'}]},
+                  {elementType: 'labels.text.fill', stylers: [{color: '#523735'}]},
+                  {elementType: 'labels.text.stroke', stylers: [{color: '#f5f1e6'}]},
+                  {
+                    featureType: 'administrative',
+                    elementType: 'geometry.stroke',
+                    stylers: [{color: '#c9b2a6'}]
+                  },
+                  {
+                    featureType: 'administrative.land_parcel',
+                    elementType: 'geometry.stroke',
+                    stylers: [{color: '#dcd2be'}]
+                  },
+                  {
+                    featureType: 'administrative.land_parcel',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#ae9e90'}]
+                  },
+                  {
+                    featureType: 'landscape.natural',
+                    elementType: 'geometry',
+                    stylers: [{color: '#dfd2ae'}]
+                  },
+                  {
+                    featureType: 'poi',
+                    elementType: 'geometry',
+                    stylers: [{color: '#dfd2ae'}]
+                  },
+                  {
+                    featureType: 'poi',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#93817c'}]
+                  },
+                  {
+                    featureType: 'poi.park',
+                    elementType: 'geometry.fill',
+                    stylers: [{color: '#a5b076'}]
+                  },
+                  {
+                    featureType: 'poi.park',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#447530'}]
+                  },
+                  {
+                    featureType: 'road',
+                    elementType: 'geometry',
+                    stylers: [{color: '#f5f1e6'}]
+                  },
+                  {
+                    featureType: 'road.arterial',
+                    elementType: 'geometry',
+                    stylers: [{color: '#fdfcf8'}]
+                  },
+                  {
+                    featureType: 'road.highway',
+                    elementType: 'geometry',
+                    stylers: [{color: '#f8c967'}]
+                  },
+                  {
+                    featureType: 'road.highway',
+                    elementType: 'geometry.stroke',
+                    stylers: [{color: '#e9bc62'}]
+                  },
+                  {
+                    featureType: 'road.highway.controlled_access',
+                    elementType: 'geometry',
+                    stylers: [{color: '#e98d58'}]
+                  },
+                  {
+                    featureType: 'road.highway.controlled_access',
+                    elementType: 'geometry.stroke',
+                    stylers: [{color: '#db8555'}]
+                  },
+                  {
+                    featureType: 'road.local',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#806b63'}]
+                  },
+                  {
+                    featureType: 'transit.line',
+                    elementType: 'geometry',
+                    stylers: [{color: '#dfd2ae'}]
+                  },
+                  {
+                    featureType: 'transit.line',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#8f7d77'}]
+                  },
+                  {
+                    featureType: 'transit.line',
+                    elementType: 'labels.text.stroke',
+                    stylers: [{color: '#ebe3cd'}]
+                  },
+                  {
+                    featureType: 'transit.station',
+                    elementType: 'geometry',
+                    stylers: [{color: '#dfd2ae'}]
+                  },
+                  {
+                    featureType: 'water',
+                    elementType: 'geometry.fill',
+                    stylers: [{color: '#b9d3c2'}]
+                  },
+                  {
+                    featureType: 'water',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#92998d'}]
+                  }
+                ],
+                {name: 'Styled Map'});
+
+            // Create a map object, and include the MapTypeId to add
+            // to the map type control.
+            var map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: 48.1964416, lng: 16.359398},
+              zoom: 10,
+              center: myLatlng,
+              mapTypeControlOptions: {
+                mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+                        'styled_map']
+              }
+            });
+
+            var marker = new google.maps.Marker({
+                      position: myLatlng,
+                      map: map,
+                      title: 'Click to zoom'
+                    });
+
+            //Associate the styled map with the MapTypeId and set it to display.
+            map.mapTypes.set('styled_map', styledMapType);
+            map.setMapTypeId('styled_map');
+          map.addListener('center_changed', function() {
+                   // 3 seconds after the center of the map has changed, pan back to the
+                   // marker.
+                   window.setTimeout(function() {
+                     map.panTo(marker.getPosition());
+                   }, 3000);
+                 });
+
+                 marker.addListener('click', function() {
+                   map.setZoom(18);
+                   map.setCenter(marker.getPosition());
+                 });
+          }
+        </script>
+
+</div>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+        </script>
+
+          
+  </body>
+</html>

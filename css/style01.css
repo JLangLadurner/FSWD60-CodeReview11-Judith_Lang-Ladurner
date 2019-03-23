@@ -25,7 +25,9 @@
      .bslf .checkbox-inline{padding-top: 7px;}
  */
 
-
+#map{
+  margin-top: 150px;
+}
 
 .thumbnail {
   padding: 0 0 5px 0;

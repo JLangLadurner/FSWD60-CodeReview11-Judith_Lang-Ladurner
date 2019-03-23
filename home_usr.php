@@ -114,6 +114,7 @@ if ($userRow["admin"] == 'yes') {
           <li><a href="events.php">Events</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
+          <li><a href="googlemaps.html"><span class="glyphicon glyphicon-search"></span>Schönbrunn</a></li>
            <li><a href="search.php"><span class="glyphicon glyphicon-search"></span>Search</a></li>
           <li><a href="logout.php?logout"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
         </ul>

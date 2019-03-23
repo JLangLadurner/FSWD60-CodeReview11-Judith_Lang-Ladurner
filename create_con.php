@@ -53,7 +53,7 @@ require 'actions/db_connect.php';
         <ul class="nav navbar-nav">
           <li><a href="home_admin.php">Home</a></li>
           <li class="active"><a href="create_con.php">add Concerts</a></li>
-          <li><a href="create-res">add Restaurants</a></li>
+          <li><a href="create_res.php">add Restaurants</a></li>
           <li><a href="#"></a></li>
           <li><a href="#"></a></li>
         </ul>

@@ -52,9 +52,9 @@ require 'actions/db_connect.php';
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <li><a href="home_admin.php">Home</a></li>
-          <li><a href="create_con">add Concerts</a></li>
-          <li class="active"><a href="create-res">add Restaurants</a></li>
-          <li><a href="create_places">add Places</a></li>
+          <li><a href="create_con.php">add Concerts</a></li>
+          <li class="active"><a href="create_res">add Restaurants</a></li>
+          <li><a href="#"></a></li>
           <li><a href="#"></a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">

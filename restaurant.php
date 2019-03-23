@@ -123,13 +123,13 @@ if ($userRow["admin"] == 'yes') {
   
 	
      <div class="row">
-      <h2>Welcome <?php echo $userRow['usr_first_name']; ?></h2><br><br>
-    </div>
+       <h5>Where you find food....</h5>
+     </div>
       <!-- INNER JOIN with the foreign keys-->
       
     <div>   
     <div class="headline">
-    <h1>Restaurants</h1> 
+     <h5>Restaurants</h5> 
   </div>
 
     <?php
@@ -150,8 +150,8 @@ if ($userRow["admin"] == 'yes') {
         <p>".$row['res_description']." </p>
         <p>Location:".$row['res_address']." </p>
         <p>Where: ".$row['loc_zip']." ".$row['loc_city']." </p>
+        <p><i id='phone' class='glyphicon glyphicon-phone'>  ".$row['res_phone']."</i></p>
         <a href=".$row['res_web']."><span class='glyphicon glyphicon-globe'></span></a>
-        <a href=".$row['res_phone']."><span class='glyphicon glyphicon-phone'></span></a>
         <hr>
         <small class=text-muted>type: ".$row['res_type']."</small></div></div>
         ";

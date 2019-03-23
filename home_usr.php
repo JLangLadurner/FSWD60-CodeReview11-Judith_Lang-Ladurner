@@ -131,7 +131,7 @@ if ($userRow["admin"] == 'yes') {
       <!-- INNER JOIN with the foreign keys-->
       <div class="row">
       <div class="headline">
-        <h1>Concerts</h1>
+        <h5>Concerts</h5>
       </div>
       <?php
       $sql1 = "SELECT * FROM concert 
@@ -169,7 +169,7 @@ if ($userRow["admin"] == 'yes') {
 <div class="row">
   
   <div class="headline">
-    <h1>Places</h1> 
+    <h5>Places</h5> 
   </div>
   
    <?php 
@@ -205,7 +205,7 @@ if ($userRow["admin"] == 'yes') {
     <div>
       
     <div class="headline">
-    <h1>Restaurants</h1> 
+    <h5>Restaurants</h5> 
   </div>
 
     <?php
@@ -226,8 +226,8 @@ if ($userRow["admin"] == 'yes') {
         <p>".$row['res_description']." </p>
         <p>Location:".$row['res_address']." </p>
         <p>Where: ".$row['loc_zip']." ".$row['loc_city']." </p>
+        <p><i id='phone' class='glyphicon glyphicon-phone'>  ".$row['res_phone']."</i></p>
         <a href=".$row['res_web']."><span class='glyphicon glyphicon-globe'></span></a>
-        <a href=".$row['res_phone']."><span class='glyphicon glyphicon-phone'></span></a>
         <hr>
         <small class=text-muted>type: ".$row['res_type']."</small></div></div>
         ";

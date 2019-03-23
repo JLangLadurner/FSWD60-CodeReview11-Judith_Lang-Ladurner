@@ -53,8 +53,8 @@ if($result->num_rows >0){
         <p>".$row['res_description']." </p>
         <p>Location:".$row['res_address']." </p>
         <p>Where: ".$row['loc_zip']." ".$row['loc_city']." </p>
+        <p><i id='phone' class='glyphicon glyphicon-phone'>  ".$row['res_phone']."</i></p>
         <a href=".$row['res_web']."><span class='glyphicon glyphicon-globe'></span></a>
-        <a href=".$row['res_phone']."><span class='glyphicon glyphicon-phone'></span></a>
         <hr>
         <small class=text-muted>type: ".$row['res_type']."</small></div></div>
         ";

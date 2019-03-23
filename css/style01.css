@@ -1,6 +1,6 @@
 
 
-.login{background-color: #f1f1f1;}
+/* .login{background-color: #f1f1f1;}
      .bslf{
     width: 350px;
   margin: 120px auto;
@@ -23,7 +23,7 @@
       color: #03A9F4;
      }
      .bslf .checkbox-inline{padding-top: 7px;}
-
+ */
 
 
 
@@ -63,15 +63,7 @@ body{
   height: 80%;
 }
   
- /* rating css  */
- .a{
-  color: orange;
-}
-
-.star {
-  font-size: 20px;
-}
-
+ 
 .gap{
   margin-top: 20px;
   margin-bottom: 10px;
@@ -87,6 +79,7 @@ body{
   background-color:  #CCC;
   font-family: 'Gloria Hallelujah', cursive;
 }
+
 
 #logo {
   width: 100px;
@@ -110,6 +103,7 @@ h5{
 }
 
 .headline {
+  margin-top: 10px;
   background-image: linear-gradient(to bottom left, #CCC, white);
   border: solid 1px darkgrey;
   width: 99%;
@@ -121,6 +115,12 @@ h5{
 
 small>[id]{
   display: none;
+}
+
+i[phone]{
+
+  color: green;
+
 }
 
 /* let's picture disappear */
